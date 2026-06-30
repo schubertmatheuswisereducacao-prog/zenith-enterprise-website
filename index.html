@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zenith Enterprise AI</title>
+    <meta name="description" content="Inteligência Artificial Agentic para operações corporativas e auditorias de alto nível.">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,600;0,700;1,400&family=Inter:wght@300;400;500;600;700&display=swap');
+
+        /* RESET & BASE */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --bg-color: #f5f0eb;
+            --surface-color: #ffffff;
+            --primary-color: #1a1a1a;
+            --text-main: #1a1a1a;
+            --text-muted: #555555;
+            --border-color: #e0dbd5;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--surface-color);
+            color: var(--text-main);
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        h1, h2, h3, .serif-font {
+            font-family: 'Crimson Text', Georgia, serif;
+        }
+
+        a { text-decoration: none; color: inherit; }
+        
+        /* NAVBAR */
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 24px 60px;
+            background-color: #fff;
+            border-bottom: 1px solid var(--border-color);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .logo {
+            font-family: 'Inter', sans-serif;
+            font-weight: 700;
+            font-size: 22px;
+            letter-spacing: -0.5px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        
+        .logo-icon {
+            width: 24px;
+            height: 24px;
+            background: #1a1a1a;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2px;
+            padding: 2px;
+        }
+        .logo-icon div { background: #fff; }
+
+        .nav-links {
+            display: flex;
+            gap: 32px;
+            font-size: 13px;
+            font-weight: 500;
+        }
+
+        .nav-links a {
+            padding-bottom: 4px;
+        }
+
+        .nav-links a:hover {
+            border-bottom: 2px solid var(--primary-color);
+        }
+
+        /* HERO SECTION */
+        .hero {
+            position: relative;
+            height: 85vh;
+            background-image: url('assets/img/hero_bg.png');
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            color: #fff;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; width: 100%; height: 100%;
+            background: rgba(0, 0, 0, 0.4);
+            z-index: 1;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            max-width: 900px;
+            padding: 0 20px;
+        }
+
+        .hero h1 {
+            font-size: 80px;
+            font-weight: 600;
+            line-height: 1.1;
+            margin-bottom: 20px;
+            text-shadow: 0 4px 20px rgba(0,0,0,0.5);
+        }
+
+        .hero p {
+            font-size: 22px;
+            font-weight: 300;
+            font-family: 'Crimson Text', serif;
+            font-style: italic;
+            opacity: 0.9;
+        }
+
+        /* BANNER */
+        .banner {
+            background-color: var(--primary-color);
+            color: #fff;
+            text-align: center;
+            padding: 12px;
+            font-size: 12px;
+            font-weight: 500;
+            letter-spacing: 0.5px;
+        }
+        .banner a { font-weight: 700; text-decoration: underline; }
+
+        /* INDUSTRIES SECTION */
+        .section {
+            padding: 100px 60px;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .section-header {
+            margin-bottom: 60px;
+            text-align: center;
+        }
+
+        .section-header h2 {
+            font-size: 48px;
+            font-weight: 400;
+            color: var(--primary-color);
+        }
+        
+        .section-header p {
+            margin-top: 10px;
+            font-size: 16px;
+            color: var(--text-muted);
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .industries-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .industry-card {
+            cursor: pointer;
+            transition: transform 0.3s ease;
+        }
+
+        .industry-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .industry-image {
+            width: 100%;
+            height: 220px;
+            background-color: #eee;
+            background-size: cover;
+            background-position: center;
+            margin-bottom: 16px;
+        }
+
+        .industry-card h3 {
+            font-family: 'Inter', sans-serif;
+            font-size: 16px;
+            font-weight: 600;
+            color: var(--primary-color);
+        }
+
+        /* DARK MODE - PLATFORM SECTION */
+        .platform-section {
+            background-color: #111;
+            color: #fff;
+            padding: 120px 60px;
+        }
+
+        .platform-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            gap: 80px;
+        }
+
+        .platform-text { flex: 1; }
+        
+        .platform-text h2 {
+            font-size: 54px;
+            margin-bottom: 24px;
+            line-height: 1.1;
+        }
+        
+        .platform-text p {
+            font-size: 18px;
+            color: #aaa;
+            margin-bottom: 32px;
+            font-weight: 300;
+        }
+
+        .btn-outline {
+            display: inline-block;
+            border: 1px solid #fff;
+            padding: 12px 24px;
+            font-size: 13px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            transition: all 0.3s;
+        }
+        
+        .btn-outline:hover {
+            background: #fff;
+            color: #000;
+        }
+
+        .platform-graphic {
+            flex: 1;
+            height: 400px;
+            position: relative;
+            background-image: linear-gradient(rgba(255,255,255,0.05) 1px, transparent 1px),
+                              linear-gradient(90deg, rgba(255,255,255,0.05) 1px, transparent 1px);
+            background-size: 40px 40px;
+        }
+        
+        /* Wireframe cubes simulating architecture */
+        .wireframe-cube {
+            position: absolute;
+            width: 120px;
+            height: 120px;
+            border: 1px solid rgba(255,255,255,0.3);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: 'Inter', sans-serif;
+            font-size: 11px;
+            color: #888;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+        }
+        .c1 { top: 40px; left: 40px; }
+        .c2 { top: 100px; left: 180px; }
+        .c3 { top: 160px; left: 320px; }
+
+        /* FOOTER */
+        footer {
+            background-color: var(--primary-color);
+            color: #fff;
+            padding: 80px 60px;
+            font-size: 13px;
+            display: flex;
+            justify-content: space-between;
+        }
+        .footer-brand h4 { margin-bottom: 10px; font-size: 18px; }
+        .footer-links { display: flex; gap: 40px; }
+        .footer-links ul { list-style: none; }
+        .footer-links li { margin-bottom: 12px; color: #aaa; }
+        .footer-links li:hover { color: #fff; cursor: pointer; }
+    </style>
+</head>
+<body>
+
+    <div class="banner">
+        Now available: Zenith AI Operations. Automate enterprise workflows with natural language. <a href="#">Learn More &rarr;</a>
+    </div>
+
+    <nav>
+        <div class="logo">
+            <div class="logo-icon"><div></div><div></div><div></div><div></div></div>
+            Zenith.ai
+        </div>
+        <div class="nav-links">
+            <a href="#">AI Software</a>
+            <a href="#">Industries</a>
+            <a href="#">Customers</a>
+            <a href="#">Events</a>
+            <a href="#">Company</a>
+        </div>
+    </nav>
+
+    <header class="hero">
+        <div class="hero-content">
+            <h1>This is Enterprise AI.</h1>
+            <p>Implementando Inteligência Artificial Agentic em operações críticas e auditorias globais.</p>
+        </div>
+    </header>
+
+    <section class="section">
+        <div class="section-header">
+            <h2>Indústrias que Operamos</h2>
+            <p>Sistemas de IA especialistas desenhados para as verticais mais complexas da economia.</p>
+        </div>
+        
+        <div class="industries-grid">
+            <div class="industry-card">
+                <div class="industry-image" style="background-image: url('assets/img/ind_manufacturing.png');"></div>
+                <h3>Manufacturing & Logistics</h3>
+            </div>
+            <div class="industry-card">
+                <div class="industry-image" style="background-image: url('assets/img/ind_oilgas.png');"></div>
+                <h3>Oil & Gas</h3>
+            </div>
+            <div class="industry-card">
+                <div class="industry-image" style="background: #e0dbd5;"></div>
+                <h3>Financial Services & Audit</h3>
+            </div>
+            <div class="industry-card">
+                <div class="industry-image" style="background: #2a2a2a;"></div>
+                <h3>Defense & Intelligence</h3>
+            </div>
+        </div>
+    </section>
+
+    <section class="platform-section">
+        <div class="platform-container">
+            <div class="platform-text">
+                <h2>Zenith Agentic AI Platform</h2>
+                <p>Construa, implante e opere aplicações de Inteligência Artificial autônoma. Uma plataforma de engenharia de agentes distribuídos para infraestruturas corporativas.</p>
+                <a href="#" class="btn-outline">Architecture Overview</a>
+            </div>
+            <div class="platform-graphic">
+                <div class="wireframe-cube c1">Data</div>
+                <div class="wireframe-cube c2">Compute</div>
+                <div class="wireframe-cube c3">Agents</div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-brand">
+            <h4>Zenith.ai</h4>
+            <p style="color: #aaa;">© 2026 Zenith Enterprise AI. Todos os direitos reservados.</p>
+        </div>
+        <div class="footer-links">
+            <ul>
+                <li style="color:#fff; font-weight:600; margin-bottom:16px;">Platform</li>
+                <li>Agentic AI</li>
+                <li>Generative AI</li>
+                <li>Security</li>
+            </ul>
+            <ul>
+                <li style="color:#fff; font-weight:600; margin-bottom:16px;">Company</li>
+                <li>About Us</li>
+                <li>Careers</li>
+                <li>Contact</li>
+            </ul>
+        </div>
+    </footer>
+
+</body>
+</html>
