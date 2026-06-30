@@ -9,12 +9,7 @@
         @import url('https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,600;0,700;1,400&family=Inter:wght@300;400;500;600;700&display=swap');
 
         /* RESET & BASE */
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
+        * { margin: 0; padding: 0; box-sizing: border-box; }
         :root {
             --bg-color: #f5f0eb;
             --surface-color: #ffffff;
@@ -32,10 +27,7 @@
             -webkit-font-smoothing: antialiased;
         }
 
-        h1, h2, h3, .serif-font {
-            font-family: 'Crimson Text', Georgia, serif;
-        }
-
+        h1, h2, h3, .serif-font { font-family: 'Crimson Text', Georgia, serif; }
         a { text-decoration: none; color: inherit; }
         
         /* NAVBAR */
@@ -58,12 +50,12 @@
             letter-spacing: -0.5px;
             display: flex;
             align-items: center;
-            gap: 8px;
+            gap: 12px;
         }
         
         .logo-icon {
-            width: 28px;
-            height: 28px;
+            width: 32px;
+            height: 32px;
             display: flex;
             align-items: center;
         }
@@ -75,13 +67,8 @@
             font-weight: 500;
         }
 
-        .nav-links a {
-            padding-bottom: 4px;
-        }
-
-        .nav-links a:hover {
-            border-bottom: 2px solid var(--primary-color);
-        }
+        .nav-links a { padding-bottom: 4px; }
+        .nav-links a:hover { border-bottom: 2px solid var(--primary-color); }
 
         /* HERO SECTION */
         .hero {
@@ -141,32 +128,40 @@
         }
         .banner a { font-weight: 700; text-decoration: underline; }
 
-        /* INDUSTRIES SECTION */
+        /* TEXT SECTIONS */
         .section {
             padding: 100px 60px;
             max-width: 1400px;
             margin: 0 auto;
         }
 
+        .text-block {
+            max-width: 800px;
+            margin: 0 auto 80px auto;
+            text-align: center;
+        }
+        
+        .text-block h2 {
+            font-size: 42px;
+            color: var(--primary-color);
+            margin-bottom: 24px;
+        }
+
+        .text-block p {
+            font-size: 18px;
+            color: var(--text-muted);
+            margin-bottom: 20px;
+            line-height: 1.8;
+        }
+
+        /* INDUSTRIES SECTION */
         .section-header {
             margin-bottom: 60px;
             text-align: center;
         }
 
-        .section-header h2 {
-            font-size: 48px;
-            font-weight: 400;
-            color: var(--primary-color);
-        }
-        
-        .section-header p {
-            margin-top: 10px;
-            font-size: 16px;
-            color: var(--text-muted);
-            max-width: 600px;
-            margin-left: auto;
-            margin-right: auto;
-        }
+        .section-header h2 { font-size: 48px; font-weight: 400; color: var(--primary-color); }
+        .section-header p { margin-top: 10px; font-size: 16px; color: var(--text-muted); max-width: 600px; margin-left: auto; margin-right: auto; }
 
         .industries-grid {
             display: grid;
@@ -174,14 +169,8 @@
             gap: 30px;
         }
 
-        .industry-card {
-            cursor: pointer;
-            transition: transform 0.3s ease;
-        }
-
-        .industry-card:hover {
-            transform: translateY(-5px);
-        }
+        .industry-card { cursor: pointer; transition: transform 0.3s ease; }
+        .industry-card:hover { transform: translateY(-5px); }
 
         .industry-image {
             width: 100%;
@@ -190,6 +179,7 @@
             background-size: cover;
             background-position: center;
             margin-bottom: 16px;
+            border: 1px solid var(--border-color);
         }
 
         .industry-card h3 {
@@ -201,77 +191,93 @@
 
         /* DARK MODE - PLATFORM SECTION */
         .platform-section {
-            background-color: #111;
+            background-color: #0a0a0a;
             color: #fff;
             padding: 120px 60px;
+            border-top: 1px solid #333;
         }
 
         .platform-container {
             max-width: 1400px;
             margin: 0 auto;
             display: flex;
-            align-items: center;
+            align-items: flex-start;
             gap: 80px;
         }
 
         .platform-text { flex: 1; }
-        
-        .platform-text h2 {
-            font-size: 54px;
-            margin-bottom: 24px;
-            line-height: 1.1;
-        }
-        
-        .platform-text p {
-            font-size: 18px;
-            color: #aaa;
-            margin-bottom: 32px;
-            font-weight: 300;
-        }
+        .platform-text h2 { font-size: 54px; margin-bottom: 24px; line-height: 1.1; }
+        .platform-text p { font-size: 18px; color: #aaa; margin-bottom: 32px; font-weight: 300; }
 
-        .btn-outline {
-            display: inline-block;
-            border: 1px solid #fff;
-            padding: 12px 24px;
-            font-size: 13px;
-            font-weight: 600;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            transition: all 0.3s;
-        }
-        
-        .btn-outline:hover {
-            background: #fff;
-            color: #000;
-        }
-
-        .platform-graphic {
-            flex: 1;
-            height: 400px;
-            position: relative;
-            background-image: linear-gradient(rgba(255,255,255,0.05) 1px, transparent 1px),
-                              linear-gradient(90deg, rgba(255,255,255,0.05) 1px, transparent 1px);
-            background-size: 40px 40px;
-        }
-        
-        /* Wireframe cubes simulating architecture */
-        .wireframe-cube {
-            position: absolute;
-            width: 120px;
-            height: 120px;
-            border: 1px solid rgba(255,255,255,0.3);
+        /* CSS ARCHITECTURE DIAGRAMS */
+        .diagram-wrapper {
+            flex: 1.5;
             display: flex;
-            align-items: center;
-            justify-content: center;
+            flex-direction: column;
+            gap: 40px;
+        }
+
+        .diagram-box {
+            background: rgba(255,255,255,0.02);
+            border: 1px solid rgba(255,255,255,0.1);
+            padding: 40px 30px;
+            position: relative;
+        }
+
+        .diagram-title {
+            position: absolute;
+            top: -12px;
+            left: 20px;
+            background: #0a0a0a;
+            padding: 0 10px;
             font-family: 'Inter', sans-serif;
             font-size: 11px;
             color: #888;
             letter-spacing: 1px;
             text-transform: uppercase;
         }
-        .c1 { top: 40px; left: 40px; }
-        .c2 { top: 100px; left: 180px; }
-        .c3 { top: 160px; left: 320px; }
+
+        .diagram-row {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 15px;
+        }
+
+        .node {
+            background: #111;
+            border: 1px solid #444;
+            padding: 16px 20px;
+            font-size: 13px;
+            font-weight: 600;
+            color: #fff;
+            text-align: center;
+            min-width: 130px;
+            position: relative;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.5);
+        }
+
+        .node-highlight {
+            border-color: #fff;
+            box-shadow: 0 0 15px rgba(255,255,255,0.1);
+        }
+
+        .arrow {
+            flex: 1;
+            height: 1px;
+            background-image: linear-gradient(90deg, #555 50%, transparent 50%);
+            background-size: 8px 1px;
+            position: relative;
+        }
+        .arrow::after {
+            content: '';
+            position: absolute;
+            right: 0;
+            top: -3px;
+            border-top: 3px solid transparent;
+            border-bottom: 3px solid transparent;
+            border-left: 5px solid #555;
+        }
 
         /* FOOTER */
         footer {
@@ -287,6 +293,7 @@
         .footer-links ul { list-style: none; }
         .footer-links li { margin-bottom: 12px; color: #aaa; }
         .footer-links li:hover { color: #fff; cursor: pointer; }
+
         /* WHATSAPP BUTTON */
         .whatsapp-float {
             position: fixed;
@@ -299,24 +306,15 @@
             border-radius: 50px;
             text-align: center;
             font-size: 30px;
-            box-shadow: 2px 2px 3px #999;
+            box-shadow: 2px 2px 3px rgba(0,0,0,0.3);
             z-index: 1000;
             display: flex;
             align-items: center;
             justify-content: center;
             transition: transform 0.3s ease;
         }
-
-        .whatsapp-float:hover {
-            transform: scale(1.1);
-        }
-
-        .whatsapp-icon {
-            width: 35px;
-            height: 35px;
-            fill: white;
-        }
-
+        .whatsapp-float:hover { transform: scale(1.1); }
+        .whatsapp-icon { width: 35px; height: 35px; fill: white; }
     </style>
 </head>
 <body>
@@ -330,13 +328,12 @@
             <div class="logo-icon">
                 <img src="assets/brand/zenith-logo.svg" alt="Zenith Tetrad Logo" style="width: 100%; height: 100%;">
             </div>
-            Zenith.ai
+            Zenith Enterprise
         </div>
         <div class="nav-links">
-            <a href="#">Software AI</a>
-            <a href="#">Indústrias</a>
-            <a href="#">Clientes</a>
-            <a href="#">Eventos</a>
+            <a href="#">Plataforma AI</a>
+            <a href="#">Verticais</a>
+            <a href="#">Arquitetura</a>
             <a href="#">Empresa</a>
         </div>
     </nav>
@@ -344,14 +341,20 @@
     <header class="hero">
         <div class="hero-content">
             <h1>Isto é IA Enterprise.</h1>
-            <p>Implementando Inteligência Artificial Agentic em operações críticas e auditorias globais.</p>
+            <p>Implementando Inteligência Artificial Agentic em operações críticas e auditorias corporativas globais.</p>
         </div>
     </header>
 
     <section class="section">
+        <div class="text-block">
+            <h2>O Fim dos Chatbots e Assistentes.</h2>
+            <p>O mercado de Inteligência Artificial está estagnado em "copilotos" que exigem supervisão humana constante. Interfaces de chat que dependem de comandos manuais não escalam operações corporativas complexas.</p>
+            <p>A <strong>Zenith Enterprise</strong> não constrói chatbots. Nós construímos infraestrutura de **IAs Agentic**. Sistemas assíncronos e autônomos que acessam seu ERP, analisam dezenas de milhares de documentos, tomam decisões baseadas em regras de negócio estritas e despacham ordens de execução. Sem a necessidade de um humano apertar "Enter".</p>
+        </div>
+
         <div class="section-header">
-            <h2>Indústrias que Operamos</h2>
-            <p>Sistemas de IA especialistas desenhados para as verticais mais complexas da economia.</p>
+            <h2>Verticais de Atuação</h2>
+            <p>Sistemas especialistas desenhados para os setores mais rigorosos da economia brasileira.</p>
         </div>
         
         <div class="industries-grid">
@@ -360,16 +363,16 @@
                 <h3>Manufatura & Logística</h3>
             </div>
             <div class="industry-card">
-                <div class="industry-image" style="background-image: url('assets/img/ind_oilgas.png');"></div>
-                <h3>Óleo & Gás</h3>
+                <div class="industry-image" style="background-image: url('assets/img/ind_audit.png');"></div>
+                <h3>Contabilidade & Auditoria</h3>
             </div>
             <div class="industry-card">
-                <div class="industry-image" style="background: #e0dbd5;"></div>
-                <h3>Serviços Financeiros & Auditoria</h3>
+                <div class="industry-image" style="background-image: url('assets/img/ind_legal.png');"></div>
+                <h3>Direito Corporativo</h3>
             </div>
             <div class="industry-card">
-                <div class="industry-image" style="background: #2a2a2a;"></div>
-                <h3>Defesa & Inteligência</h3>
+                <div class="industry-image" style="background-image: url('assets/img/ind_education.png');"></div>
+                <h3>Educação & EdTech</h3>
             </div>
         </div>
     </section>
@@ -377,29 +380,64 @@
     <section class="platform-section">
         <div class="platform-container">
             <div class="platform-text">
-                <h2>Zenith Agentic AI Platform</h2>
-                <p>Construa, implante e opere aplicações de Inteligência Artificial autônoma. Uma plataforma de engenharia de agentes distribuídos para infraestruturas corporativas.</p>
-                <a href="#" class="btn-outline">Visão Geral da Arquitetura</a>
+                <h2>Topologia Multi-Agentic</h2>
+                <p>Nossa plataforma não depende de um único modelo de linguagem genérico. Construímos enxames de Sub-Agentes especialistas, orquestrados por um Agente Executivo central.</p>
+                <p>O fluxo começa na ingestão de dados da sua empresa (RAG), garantindo que a IA baseie cada decisão estritamente no seu histórico institucional, eliminando alucinações.</p>
             </div>
-            <div class="platform-graphic">
-                <div class="wireframe-cube c1">Data</div>
-                <div class="wireframe-cube c2">Compute</div>
-                <div class="wireframe-cube c3">Agents</div>
+            
+            <div class="diagram-wrapper">
+                
+                <!-- RAG DIAGRAM -->
+                <div class="diagram-box">
+                    <div class="diagram-title">Retrieval-Augmented Generation (RAG)</div>
+                    <div class="diagram-row">
+                        <div class="node" style="min-width: 80px;">Documentos ERP</div>
+                        <div class="arrow"></div>
+                        <div class="node">Vector Database</div>
+                        <div class="arrow"></div>
+                        <div class="node node-highlight">LLM Cortex</div>
+                    </div>
+                </div>
+
+                <!-- MULTI-AGENT DIAGRAM -->
+                <div class="diagram-box">
+                    <div class="diagram-title">Orquestração Multi-Agent</div>
+                    <div style="display: flex; flex-direction: column; align-items: center; gap: 20px;">
+                        <div class="node node-highlight" style="width: 200px;">Agente Executivo</div>
+                        
+                        <!-- Setas verticais para baixo -->
+                        <div style="display: flex; justify-content: space-between; width: 300px; position: relative;">
+                            <div style="width: 1px; height: 30px; background-image: linear-gradient(180deg, #555 50%, transparent 50%); background-size: 1px 8px; position: absolute; left: 0;"></div>
+                            <div style="width: 1px; height: 30px; background-image: linear-gradient(180deg, #555 50%, transparent 50%); background-size: 1px 8px; position: absolute; left: 50%;"></div>
+                            <div style="width: 1px; height: 30px; background-image: linear-gradient(180deg, #555 50%, transparent 50%); background-size: 1px 8px; position: absolute; right: 0;"></div>
+                        </div>
+
+                        <div style="display: flex; gap: 20px;">
+                            <div class="node" style="font-size: 11px; min-width: 100px;">Agente<br>Pesquisador</div>
+                            <div class="node" style="font-size: 11px; min-width: 100px;">Agente<br>Analista de Dados</div>
+                            <div class="node" style="font-size: 11px; min-width: 100px;">Agente<br>Redator</div>
+                        </div>
+                    </div>
+                </div>
+
             </div>
         </div>
     </section>
 
     <footer>
         <div class="footer-brand">
-            <h4>Zenith.ai</h4>
+            <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 10px;">
+                <img src="assets/brand/zenith-logo.svg" style="width: 24px; filter: invert(1);">
+                <h4 style="margin: 0; font-size: 18px;">Zenith Enterprise</h4>
+            </div>
             <p style="color: #aaa;">© 2026 Zenith Enterprise AI. Todos os direitos reservados.</p>
         </div>
         <div class="footer-links">
             <ul>
                 <li style="color:#fff; font-weight:600; margin-bottom:16px;">Plataforma</li>
-                <li>IA Agentic</li>
-                <li>IA Generativa</li>
-                <li>Segurança</li>
+                <li>Orquestração Agentic</li>
+                <li>Integração de Sistemas</li>
+                <li>Segurança & Auditoria</li>
             </ul>
             <ul>
                 <li style="color:#fff; font-weight:600; margin-bottom:16px;">Empresa</li>
@@ -412,7 +450,7 @@
 
     <!-- Botão WhatsApp Flutuante -->
     <a href="https://wa.me/5547999887708" class="whatsapp-float" target="_blank" rel="noopener noreferrer">
-        <svg class="whatsapp-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path d="M380.9 97.1C339 55.1 283.2 32 223.9 32c-122.4 0-222 99.6-222 222 0 39.1 10.2 77.3 29.6 111L0 480l117.7-30.9c32.4 17.7 68.9 27 106.1 27h.1c122.3 0 224.1-99.6 224.1-222 0-59.3-25.2-115-67.1-157zm-157 341.6c-33.2 0-65.7-8.9-94-25.7l-6.7-4-69.8 18.3L72 359.2l-4.4-7c-18.5-29.4-28.2-63.3-28.2-98.2 0-101.7 82.8-184.5 184.6-184.5 49.3 0 95.6 19.2 130.4 54.1 34.8 34.9 56.2 81.2 56.1 130.5 0 101.8-84.9 184.6-186.6 184.6zm101.2-138.2c-5.5-2.8-32.8-16.2-37.9-18-5.1-1.9-8.8-2.8-12.5 2.8-3.7 5.6-14.3 18-17.6 21.8-3.2 3.7-6.5 4.2-12 1.4-32.6-16.3-54-29.1-75.5-66-5.7-9.8 5.7-9.1 16.3-30.3 1.8-3.7 .9-6.9-.5-9.7-1.4-2.8-12.5-30.1-17.1-41.2-4.5-10.8-9.1-9.3-12.5-9.5-3.2-.2-6.9-.2-10.6-.2-3.7 0-9.7 1.4-14.8 6.9-5.1 5.6-19.4 19-19.4 46.3 0 27.3 19.9 53.7 22.6 57.4 2.8 3.7 39.1 59.7 94.8 83.8 35.2 15.2 49 16.5 66.6 13.9 10.7-1.6 32.8-13.4 37.4-26.4 4.6-13 4.6-24.1 3.2-26.4-1.3-2.5-5-3.9-10.5-6.6z"/></svg>
+        <svg class="whatsapp-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M380.9 97.1C339 55.1 283.2 32 223.9 32c-122.4 0-222 99.6-222 222 0 39.1 10.2 77.3 29.6 111L0 480l117.7-30.9c32.4 17.7 68.9 27 106.1 27h.1c122.3 0 224.1-99.6 224.1-222 0-59.3-25.2-115-67.1-157zm-157 341.6c-33.2 0-65.7-8.9-94-25.7l-6.7-4-69.8 18.3L72 359.2l-4.4-7c-18.5-29.4-28.2-63.3-28.2-98.2 0-101.7 82.8-184.5 184.6-184.5 49.3 0 95.6 19.2 130.4 54.1 34.8 34.9 56.2 81.2 56.1 130.5 0 101.8-84.9 184.6-186.6 184.6zm101.2-138.2c-5.5-2.8-32.8-16.2-37.9-18-5.1-1.9-8.8-2.8-12.5 2.8-3.7 5.6-14.3 18-17.6 21.8-3.2 3.7-6.5 4.2-12 1.4-32.6-16.3-54-29.1-75.5-66-5.7-9.8 5.7-9.1 16.3-30.3 1.8-3.7 .9-6.9-.5-9.7-1.4-2.8-12.5-30.1-17.1-41.2-4.5-10.8-9.1-9.3-12.5-9.5-3.2-.2-6.9-.2-10.6-.2-3.7 0-9.7 1.4-14.8 6.9-5.1 5.6-19.4 19-19.4 46.3 0 27.3 19.9 53.7 22.6 57.4 2.8 3.7 39.1 59.7 94.8 83.8 35.2 15.2 49 16.5 66.6 13.9 10.7-1.6 32.8-13.4 37.4-26.4 4.6-13 4.6-24.1 3.2-26.4-1.3-2.5-5-3.9-10.5-6.6z"/></svg>
     </a>
 
 </body>
