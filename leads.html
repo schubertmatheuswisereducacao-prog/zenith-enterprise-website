@@ -70,6 +70,24 @@
         .status-meeting { background: rgba(255, 193, 7, 0.1); color: #ffc107; border: 1px solid rgba(255, 193, 7, 0.2); }
         .status-prospect { background: rgba(0, 123, 255, 0.1); color: #007bff; border: 1px solid rgba(0, 123, 255, 0.2); }
 
+    
+        .status-select {
+            padding: 4px 10px;
+            border-radius: 20px;
+            font-size: 11px;
+            font-weight: 600;
+            text-transform: uppercase;
+            appearance: none;
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            cursor: pointer;
+            font-family: inherit;
+            outline: none;
+        }
+        .status-select option {
+            background: #1a1a1a;
+            color: #fff;
+        }
     </style>
 </head>
 <body>
@@ -107,21 +125,39 @@
                     <td contenteditable="true" style="color:#aaa;">Manufatura / Papel</td>
                     <td contenteditable="true">Áurio (Diretor)</td>
                     <td contenteditable="true">Inbound Zenith</td>
-                    <td contenteditable="true"><span class="badge status-active">Cliente Ativo</span></td>
+                    <td contenteditable="true"><select class="status-select status-active" onchange="this.className='status-select ' + this.value">
+                            <option value="status-prospect">Prospecção</option>
+<option value="status-draft">Mapeado</option>
+<option value="status-meeting">Em Negociação</option>
+<option value="status-active" selected>Cliente Ativo</option>
+
+                        </select></td>
                 </tr>
                 <tr>
                     <td contenteditable="true" style="font-weight: 600;">Exclusiva Sex</td>
                     <td contenteditable="true" style="color:#aaa;">E-commerce / Varejo</td>
                     <td contenteditable="true">CEO</td>
                     <td contenteditable="true">Amanda Michelin (C-Level)</td>
-                    <td contenteditable="true"><span class="badge status-meeting">Reunião Agendada</span></td>
+                    <td contenteditable="true"><select class="status-select status-meeting" onchange="this.className='status-select ' + this.value">
+                            <option value="status-prospect">Prospecção</option>
+<option value="status-draft">Mapeado</option>
+<option value="status-meeting" selected>Reunião Agendada</option>
+<option value="status-active">Parceiro Ativo</option>
+
+                        </select></td>
                 </tr>
                 <tr>
                     <td contenteditable="true" style="font-weight: 600;">ELembranças</td>
                     <td contenteditable="true" style="color:#aaa;">Varejo Personalizado</td>
                     <td contenteditable="true">Rubens Juan</td>
                     <td contenteditable="true">Evento Nuvemshop</td>
-                    <td contenteditable="true"><span class="badge status-prospect">Prospecção</span></td>
+                    <td contenteditable="true"><select class="status-select status-prospect" onchange="this.className='status-select ' + this.value">
+                            <option value="status-prospect" selected>Prospecção</option>
+<option value="status-draft">Mapeado</option>
+<option value="status-meeting">Em Negociação</option>
+<option value="status-active">Parceiro Ativo</option>
+
+                        </select></td>
                 </tr>
             </tbody>
         </table>

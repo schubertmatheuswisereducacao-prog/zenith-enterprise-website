@@ -70,6 +70,24 @@
         .status-draft { background: rgba(255, 193, 7, 0.1); color: #ffc107; border: 1px solid rgba(255, 193, 7, 0.2); }
         .status-prospect { background: rgba(0, 123, 255, 0.1); color: #007bff; border: 1px solid rgba(0, 123, 255, 0.2); }
 
+    
+        .status-select {
+            padding: 4px 10px;
+            border-radius: 20px;
+            font-size: 11px;
+            font-weight: 600;
+            text-transform: uppercase;
+            appearance: none;
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            cursor: pointer;
+            font-family: inherit;
+            outline: none;
+        }
+        .status-select option {
+            background: #1a1a1a;
+            color: #fff;
+        }
     </style>
 </head>
 <body>
@@ -105,235 +123,469 @@
                     <td contenteditable="true" style="font-weight: 600;">VBMC</td>
                     <td contenteditable="true" style="color:#aaa;">Consultoria / BPO</td>
                     <td contenteditable="true">Perfil: Já é parceira. Expandi...</td>
-                    <td contenteditable="true"><span class="badge status-prospect">Mapeado</span></td>
+                    <td contenteditable="true"><select class="status-select status-prospect" onchange="this.className='status-select ' + this.value">
+                            <option value="status-prospect" selected>Mapeado</option>
+<option value="status-draft">Mapeado</option>
+<option value="status-meeting">Em Negociação</option>
+<option value="status-active">Parceiro Ativo</option>
+
+                        </select></td>
                 </tr>
                 <tr>
                     <td contenteditable="true" style="font-weight: 600;">Mid Falconi</td>
                     <td contenteditable="true" style="color:#aaa;">Consultoria / BPO</td>
                     <td contenteditable="true">Perfil: Spin-off da Falconi pa...</td>
-                    <td contenteditable="true"><span class="badge status-prospect">Mapeado</span></td>
+                    <td contenteditable="true"><select class="status-select status-prospect" onchange="this.className='status-select ' + this.value">
+                            <option value="status-prospect" selected>Mapeado</option>
+<option value="status-draft">Mapeado</option>
+<option value="status-meeting">Em Negociação</option>
+<option value="status-active">Parceiro Ativo</option>
+
+                        </select></td>
                 </tr>
                 <tr>
                     <td contenteditable="true" style="font-weight: 600;">Falconi (core)</td>
                     <td contenteditable="true" style="color:#aaa;">Consultoria / BPO</td>
                     <td contenteditable="true">Perfil: Gestão e eficiência op...</td>
-                    <td contenteditable="true"><span class="badge status-prospect">Mapeado</span></td>
+                    <td contenteditable="true"><select class="status-select status-prospect" onchange="this.className='status-select ' + this.value">
+                            <option value="status-prospect" selected>Mapeado</option>
+<option value="status-draft">Mapeado</option>
+<option value="status-meeting">Em Negociação</option>
+<option value="status-active">Parceiro Ativo</option>
+
+                        </select></td>
                 </tr>
                 <tr>
                     <td contenteditable="true" style="font-weight: 600;">Alianza Consultoria</td>
                     <td contenteditable="true" style="color:#aaa;">Consultoria / BPO</td>
                     <td contenteditable="true">Perfil: 18 anos, 600+ empresas...</td>
-                    <td contenteditable="true"><span class="badge status-prospect">Mapeado</span></td>
+                    <td contenteditable="true"><select class="status-select status-prospect" onchange="this.className='status-select ' + this.value">
+                            <option value="status-prospect" selected>Mapeado</option>
+<option value="status-draft">Mapeado</option>
+<option value="status-meeting">Em Negociação</option>
+<option value="status-active">Parceiro Ativo</option>
+
+                        </select></td>
                 </tr>
                 <tr>
                     <td contenteditable="true" style="font-weight: 600;">Hominiss Solutions</td>
                     <td contenteditable="true" style="color:#aaa;">Consultoria / BPO</td>
                     <td contenteditable="true">Perfil: São Carlos/SP, Lean pa...</td>
-                    <td contenteditable="true"><span class="badge status-prospect">Mapeado</span></td>
+                    <td contenteditable="true"><select class="status-select status-prospect" onchange="this.className='status-select ' + this.value">
+                            <option value="status-prospect" selected>Mapeado</option>
+<option value="status-draft">Mapeado</option>
+<option value="status-meeting">Em Negociação</option>
+<option value="status-active">Parceiro Ativo</option>
+
+                        </select></td>
                 </tr>
                 <tr>
                     <td contenteditable="true" style="font-weight: 600;">Métodos MB (Master Business)</td>
                     <td contenteditable="true" style="color:#aaa;">Consultoria / BPO</td>
                     <td contenteditable="true">Perfil: 45 anos, SP, foco em e...</td>
-                    <td contenteditable="true"><span class="badge status-prospect">Mapeado</span></td>
+                    <td contenteditable="true"><select class="status-select status-prospect" onchange="this.className='status-select ' + this.value">
+                            <option value="status-prospect" selected>Mapeado</option>
+<option value="status-draft">Mapeado</option>
+<option value="status-meeting">Em Negociação</option>
+<option value="status-active">Parceiro Ativo</option>
+
+                        </select></td>
                 </tr>
                 <tr>
                     <td contenteditable="true" style="font-weight: 600;">PWR Gestão</td>
                     <td contenteditable="true" style="color:#aaa;">Consultoria / BPO</td>
                     <td contenteditable="true">Perfil: Gestão e processos par...</td>
-                    <td contenteditable="true"><span class="badge status-prospect">Mapeado</span></td>
+                    <td contenteditable="true"><select class="status-select status-prospect" onchange="this.className='status-select ' + this.value">
+                            <option value="status-prospect" selected>Mapeado</option>
+<option value="status-draft">Mapeado</option>
+<option value="status-meeting">Em Negociação</option>
+<option value="status-active">Parceiro Ativo</option>
+
+                        </select></td>
                 </tr>
                 <tr>
                     <td contenteditable="true" style="font-weight: 600;">IRISS Consultoria</td>
                     <td contenteditable="true" style="color:#aaa;">Consultoria / BPO</td>
                     <td contenteditable="true">Perfil: Processos, operações e...</td>
-                    <td contenteditable="true"><span class="badge status-prospect">Mapeado</span></td>
+                    <td contenteditable="true"><select class="status-select status-prospect" onchange="this.className='status-select ' + this.value">
+                            <option value="status-prospect" selected>Mapeado</option>
+<option value="status-draft">Mapeado</option>
+<option value="status-meeting">Em Negociação</option>
+<option value="status-active">Parceiro Ativo</option>
+
+                        </select></td>
                 </tr>
                 <tr>
                     <td contenteditable="true" style="font-weight: 600;">Ação Consultoria (BH)</td>
                     <td contenteditable="true" style="color:#aaa;">Consultoria / BPO</td>
                     <td contenteditable="true">Perfil: 20+ anos, gestão organ...</td>
-                    <td contenteditable="true"><span class="badge status-prospect">Mapeado</span></td>
+                    <td contenteditable="true"><select class="status-select status-prospect" onchange="this.className='status-select ' + this.value">
+                            <option value="status-prospect" selected>Mapeado</option>
+<option value="status-draft">Mapeado</option>
+<option value="status-meeting">Em Negociação</option>
+<option value="status-active">Parceiro Ativo</option>
+
+                        </select></td>
                 </tr>
                 <tr>
                     <td contenteditable="true" style="font-weight: 600;">Grant Thornton Brasil</td>
                     <td contenteditable="true" style="color:#aaa;">Consultoria / BPO</td>
                     <td contenteditable="true">Perfil: Auditoria e consultori...</td>
-                    <td contenteditable="true"><span class="badge status-prospect">Mapeado</span></td>
+                    <td contenteditable="true"><select class="status-select status-prospect" onchange="this.className='status-select ' + this.value">
+                            <option value="status-prospect" selected>Mapeado</option>
+<option value="status-draft">Mapeado</option>
+<option value="status-meeting">Em Negociação</option>
+<option value="status-active">Parceiro Ativo</option>
+
+                        </select></td>
                 </tr>
                 <tr>
                     <td contenteditable="true" style="font-weight: 600;">BDO Brasil</td>
                     <td contenteditable="true" style="color:#aaa;">Consultoria / BPO</td>
                     <td contenteditable="true">Perfil: Auditoria + consultori...</td>
-                    <td contenteditable="true"><span class="badge status-prospect">Mapeado</span></td>
+                    <td contenteditable="true"><select class="status-select status-prospect" onchange="this.className='status-select ' + this.value">
+                            <option value="status-prospect" selected>Mapeado</option>
+<option value="status-draft">Mapeado</option>
+<option value="status-meeting">Em Negociação</option>
+<option value="status-active">Parceiro Ativo</option>
+
+                        </select></td>
                 </tr>
                 <tr>
                     <td contenteditable="true" style="font-weight: 600;">Crowe Brasil</td>
                     <td contenteditable="true" style="color:#aaa;">Consultoria / BPO</td>
                     <td contenteditable="true">Perfil: Auditoria e consultori...</td>
-                    <td contenteditable="true"><span class="badge status-prospect">Mapeado</span></td>
+                    <td contenteditable="true"><select class="status-select status-prospect" onchange="this.className='status-select ' + this.value">
+                            <option value="status-prospect" selected>Mapeado</option>
+<option value="status-draft">Mapeado</option>
+<option value="status-meeting">Em Negociação</option>
+<option value="status-active">Parceiro Ativo</option>
+
+                        </select></td>
                 </tr>
                 <tr>
                     <td contenteditable="true" style="font-weight: 600;">Baker Tilly Brasil</td>
                     <td contenteditable="true" style="color:#aaa;">Consultoria / BPO</td>
                     <td contenteditable="true">Perfil: Rede internacional com...</td>
-                    <td contenteditable="true"><span class="badge status-prospect">Mapeado</span></td>
+                    <td contenteditable="true"><select class="status-select status-prospect" onchange="this.className='status-select ' + this.value">
+                            <option value="status-prospect" selected>Mapeado</option>
+<option value="status-draft">Mapeado</option>
+<option value="status-meeting">Em Negociação</option>
+<option value="status-active">Parceiro Ativo</option>
+
+                        </select></td>
                 </tr>
                 <tr>
                     <td contenteditable="true" style="font-weight: 600;">RSM Brasil</td>
                     <td contenteditable="true" style="color:#aaa;">Consultoria / BPO</td>
                     <td contenteditable="true">Perfil: Consultoria e auditori...</td>
-                    <td contenteditable="true"><span class="badge status-prospect">Mapeado</span></td>
+                    <td contenteditable="true"><select class="status-select status-prospect" onchange="this.className='status-select ' + this.value">
+                            <option value="status-prospect" selected>Mapeado</option>
+<option value="status-draft">Mapeado</option>
+<option value="status-meeting">Em Negociação</option>
+<option value="status-active">Parceiro Ativo</option>
+
+                        </select></td>
                 </tr>
                 <tr>
                     <td contenteditable="true" style="font-weight: 600;">ActionCOACH Brasil</td>
                     <td contenteditable="true" style="color:#aaa;">Consultoria / BPO</td>
                     <td contenteditable="true">Perfil: Maior franquia de coac...</td>
-                    <td contenteditable="true"><span class="badge status-prospect">Mapeado</span></td>
+                    <td contenteditable="true"><select class="status-select status-prospect" onchange="this.className='status-select ' + this.value">
+                            <option value="status-prospect" selected>Mapeado</option>
+<option value="status-draft">Mapeado</option>
+<option value="status-meeting">Em Negociação</option>
+<option value="status-active">Parceiro Ativo</option>
+
+                        </select></td>
                 </tr>
                 <tr>
                     <td contenteditable="true" style="font-weight: 600;">Consulting Now (Grupo Intermaster)</td>
                     <td contenteditable="true" style="color:#aaa;">Consultoria / BPO</td>
                     <td contenteditable="true">Perfil: Foco em cidades 200k+ ...</td>
-                    <td contenteditable="true"><span class="badge status-prospect">Mapeado</span></td>
+                    <td contenteditable="true"><select class="status-select status-prospect" onchange="this.className='status-select ' + this.value">
+                            <option value="status-prospect" selected>Mapeado</option>
+<option value="status-draft">Mapeado</option>
+<option value="status-meeting">Em Negociação</option>
+<option value="status-active">Parceiro Ativo</option>
+
+                        </select></td>
                 </tr>
                 <tr>
                     <td contenteditable="true" style="font-weight: 600;">VD Negócios</td>
                     <td contenteditable="true" style="color:#aaa;">Consultoria / BPO</td>
                     <td contenteditable="true">Perfil: Reestruturação finance...</td>
-                    <td contenteditable="true"><span class="badge status-prospect">Mapeado</span></td>
+                    <td contenteditable="true"><select class="status-select status-prospect" onchange="this.className='status-select ' + this.value">
+                            <option value="status-prospect" selected>Mapeado</option>
+<option value="status-draft">Mapeado</option>
+<option value="status-meeting">Em Negociação</option>
+<option value="status-active">Parceiro Ativo</option>
+
+                        </select></td>
                 </tr>
                 <tr>
                     <td contenteditable="true" style="font-weight: 600;">Habitus Consultoria</td>
                     <td contenteditable="true" style="color:#aaa;">Consultoria / BPO</td>
                     <td contenteditable="true">Perfil: 6 certificações (RH, F...</td>
-                    <td contenteditable="true"><span class="badge status-prospect">Mapeado</span></td>
+                    <td contenteditable="true"><select class="status-select status-prospect" onchange="this.className='status-select ' + this.value">
+                            <option value="status-prospect" selected>Mapeado</option>
+<option value="status-draft">Mapeado</option>
+<option value="status-meeting">Em Negociação</option>
+<option value="status-active">Parceiro Ativo</option>
+
+                        </select></td>
                 </tr>
                 <tr>
                     <td contenteditable="true" style="font-weight: 600;">NexB Valor Negócios</td>
                     <td contenteditable="true" style="color:#aaa;">Consultoria / BPO</td>
                     <td contenteditable="true">Perfil: Fusões/aquisições, cré...</td>
-                    <td contenteditable="true"><span class="badge status-prospect">Mapeado</span></td>
+                    <td contenteditable="true"><select class="status-select status-prospect" onchange="this.className='status-select ' + this.value">
+                            <option value="status-prospect" selected>Mapeado</option>
+<option value="status-draft">Mapeado</option>
+<option value="status-meeting">Em Negociação</option>
+<option value="status-active">Parceiro Ativo</option>
+
+                        </select></td>
                 </tr>
                 <tr>
                     <td contenteditable="true" style="font-weight: 600;">Grupo Bittencourt</td>
                     <td contenteditable="true" style="color:#aaa;">Consultoria / BPO</td>
                     <td contenteditable="true">Perfil: 2.600+ projetos, expan...</td>
-                    <td contenteditable="true"><span class="badge status-prospect">Mapeado</span></td>
+                    <td contenteditable="true"><select class="status-select status-prospect" onchange="this.className='status-select ' + this.value">
+                            <option value="status-prospect" selected>Mapeado</option>
+<option value="status-draft">Mapeado</option>
+<option value="status-meeting">Em Negociação</option>
+<option value="status-active">Parceiro Ativo</option>
+
+                        </select></td>
                 </tr>
                 <tr>
                     <td contenteditable="true" style="font-weight: 600;">Berry Consultoria</td>
                     <td contenteditable="true" style="color:#aaa;">Consultoria / BPO</td>
                     <td contenteditable="true">Perfil: Rede de franquias, ges...</td>
-                    <td contenteditable="true"><span class="badge status-prospect">Mapeado</span></td>
+                    <td contenteditable="true"><select class="status-select status-prospect" onchange="this.className='status-select ' + this.value">
+                            <option value="status-prospect" selected>Mapeado</option>
+<option value="status-draft">Mapeado</option>
+<option value="status-meeting">Em Negociação</option>
+<option value="status-active">Parceiro Ativo</option>
+
+                        </select></td>
                 </tr>
                 <tr>
                     <td contenteditable="true" style="font-weight: 600;">FCX Consultoria Empresarial</td>
                     <td contenteditable="true" style="color:#aaa;">Consultoria / BPO</td>
                     <td contenteditable="true">Perfil: Rede de franquias....</td>
-                    <td contenteditable="true"><span class="badge status-prospect">Mapeado</span></td>
+                    <td contenteditable="true"><select class="status-select status-prospect" onchange="this.className='status-select ' + this.value">
+                            <option value="status-prospect" selected>Mapeado</option>
+<option value="status-draft">Mapeado</option>
+<option value="status-meeting">Em Negociação</option>
+<option value="status-active">Parceiro Ativo</option>
+
+                        </select></td>
                 </tr>
                 <tr>
                     <td contenteditable="true" style="font-weight: 600;">Grupo Villela</td>
                     <td contenteditable="true" style="color:#aaa;">Consultoria / BPO</td>
                     <td contenteditable="true">Perfil: Consultoria/franchisin...</td>
-                    <td contenteditable="true"><span class="badge status-prospect">Mapeado</span></td>
+                    <td contenteditable="true"><select class="status-select status-prospect" onchange="this.className='status-select ' + this.value">
+                            <option value="status-prospect" selected>Mapeado</option>
+<option value="status-draft">Mapeado</option>
+<option value="status-meeting">Em Negociação</option>
+<option value="status-active">Parceiro Ativo</option>
+
+                        </select></td>
                 </tr>
                 <tr>
                     <td contenteditable="true" style="font-weight: 600;">Dr. Fiscal</td>
                     <td contenteditable="true" style="color:#aaa;">Consultoria / BPO</td>
                     <td contenteditable="true">Perfil: Nicho fiscal/tributári...</td>
-                    <td contenteditable="true"><span class="badge status-prospect">Mapeado</span></td>
+                    <td contenteditable="true"><select class="status-select status-prospect" onchange="this.className='status-select ' + this.value">
+                            <option value="status-prospect" selected>Mapeado</option>
+<option value="status-draft">Mapeado</option>
+<option value="status-meeting">Em Negociação</option>
+<option value="status-active">Parceiro Ativo</option>
+
+                        </select></td>
                 </tr>
                 <tr>
                     <td contenteditable="true" style="font-weight: 600;">GGV Inteligência em Vendas</td>
                     <td contenteditable="true" style="color:#aaa;">Consultoria / BPO</td>
                     <td contenteditable="true">Perfil: Estruturação comercial...</td>
-                    <td contenteditable="true"><span class="badge status-prospect">Mapeado</span></td>
+                    <td contenteditable="true"><select class="status-select status-prospect" onchange="this.className='status-select ' + this.value">
+                            <option value="status-prospect" selected>Mapeado</option>
+<option value="status-draft">Mapeado</option>
+<option value="status-meeting">Em Negociação</option>
+<option value="status-active">Parceiro Ativo</option>
+
+                        </select></td>
                 </tr>
                 <tr>
                     <td contenteditable="true" style="font-weight: 600;">Sales Fort Club (Diego Rodrigues)</td>
                     <td contenteditable="true" style="color:#aaa;">Consultoria / BPO</td>
                     <td contenteditable="true">Perfil: Já contratada — metodo...</td>
-                    <td contenteditable="true"><span class="badge status-prospect">Mapeado</span></td>
+                    <td contenteditable="true"><select class="status-select status-prospect" onchange="this.className='status-select ' + this.value">
+                            <option value="status-prospect" selected>Mapeado</option>
+<option value="status-draft">Mapeado</option>
+<option value="status-meeting">Em Negociação</option>
+<option value="status-active">Parceiro Ativo</option>
+
+                        </select></td>
                 </tr>
                 <tr>
                     <td contenteditable="true" style="font-weight: 600;">ILOS Consultoria</td>
                     <td contenteditable="true" style="color:#aaa;">Consultoria / BPO</td>
                     <td contenteditable="true">Perfil: Supply Chain, logístic...</td>
-                    <td contenteditable="true"><span class="badge status-prospect">Mapeado</span></td>
+                    <td contenteditable="true"><select class="status-select status-prospect" onchange="this.className='status-select ' + this.value">
+                            <option value="status-prospect" selected>Mapeado</option>
+<option value="status-draft">Mapeado</option>
+<option value="status-meeting">Em Negociação</option>
+<option value="status-active">Parceiro Ativo</option>
+
+                        </select></td>
                 </tr>
                 <tr>
                     <td contenteditable="true" style="font-weight: 600;">IMAM Consultoria</td>
                     <td contenteditable="true" style="color:#aaa;">Consultoria / BPO</td>
                     <td contenteditable="true">Perfil: Lean, intralogística, ...</td>
-                    <td contenteditable="true"><span class="badge status-prospect">Mapeado</span></td>
+                    <td contenteditable="true"><select class="status-select status-prospect" onchange="this.className='status-select ' + this.value">
+                            <option value="status-prospect" selected>Mapeado</option>
+<option value="status-draft">Mapeado</option>
+<option value="status-meeting">Em Negociação</option>
+<option value="status-active">Parceiro Ativo</option>
+
+                        </select></td>
                 </tr>
                 <tr>
                     <td contenteditable="true" style="font-weight: 600;">GMC Consultoria</td>
                     <td contenteditable="true" style="color:#aaa;">Consultoria / BPO</td>
                     <td contenteditable="true">Perfil: Médio e grande porte, ...</td>
-                    <td contenteditable="true"><span class="badge status-prospect">Mapeado</span></td>
+                    <td contenteditable="true"><select class="status-select status-prospect" onchange="this.className='status-select ' + this.value">
+                            <option value="status-prospect" selected>Mapeado</option>
+<option value="status-draft">Mapeado</option>
+<option value="status-meeting">Em Negociação</option>
+<option value="status-active">Parceiro Ativo</option>
+
+                        </select></td>
                 </tr>
                 <tr>
                     <td contenteditable="true" style="font-weight: 600;">Peers Consulting</td>
                     <td contenteditable="true" style="color:#aaa;">Consultoria / BPO</td>
                     <td contenteditable="true">Perfil: Eficiência operacional...</td>
-                    <td contenteditable="true"><span class="badge status-prospect">Mapeado</span></td>
+                    <td contenteditable="true"><select class="status-select status-prospect" onchange="this.className='status-select ' + this.value">
+                            <option value="status-prospect" selected>Mapeado</option>
+<option value="status-draft">Mapeado</option>
+<option value="status-meeting">Em Negociação</option>
+<option value="status-active">Parceiro Ativo</option>
+
+                        </select></td>
                 </tr>
                 <tr>
                     <td contenteditable="true" style="font-weight: 600;">Value Chain Consultoria</td>
                     <td contenteditable="true" style="color:#aaa;">Consultoria / BPO</td>
                     <td contenteditable="true">Perfil: Lean Manufacturing, Su...</td>
-                    <td contenteditable="true"><span class="badge status-prospect">Mapeado</span></td>
+                    <td contenteditable="true"><select class="status-select status-prospect" onchange="this.className='status-select ' + this.value">
+                            <option value="status-prospect" selected>Mapeado</option>
+<option value="status-draft">Mapeado</option>
+<option value="status-meeting">Em Negociação</option>
+<option value="status-active">Parceiro Ativo</option>
+
+                        </select></td>
                 </tr>
                 <tr>
                     <td contenteditable="true" style="font-weight: 600;">Massimo Consulting</td>
                     <td contenteditable="true" style="color:#aaa;">Consultoria / BPO</td>
                     <td contenteditable="true">Perfil: Bens de consumo, varej...</td>
-                    <td contenteditable="true"><span class="badge status-prospect">Mapeado</span></td>
+                    <td contenteditable="true"><select class="status-select status-prospect" onchange="this.className='status-select ' + this.value">
+                            <option value="status-prospect" selected>Mapeado</option>
+<option value="status-draft">Mapeado</option>
+<option value="status-meeting">Em Negociação</option>
+<option value="status-active">Parceiro Ativo</option>
+
+                        </select></td>
                 </tr>
                 <tr>
                     <td contenteditable="true" style="font-weight: 600;">B2E Saúde</td>
                     <td contenteditable="true" style="color:#aaa;">Consultoria / BPO</td>
                     <td contenteditable="true">Perfil: ~30 anos, hospitais/cl...</td>
-                    <td contenteditable="true"><span class="badge status-prospect">Mapeado</span></td>
+                    <td contenteditable="true"><select class="status-select status-prospect" onchange="this.className='status-select ' + this.value">
+                            <option value="status-prospect" selected>Mapeado</option>
+<option value="status-draft">Mapeado</option>
+<option value="status-meeting">Em Negociação</option>
+<option value="status-active">Parceiro Ativo</option>
+
+                        </select></td>
                 </tr>
                 <tr>
                     <td contenteditable="true" style="font-weight: 600;">M.A Consultoria Hospitalar</td>
                     <td contenteditable="true" style="color:#aaa;">Consultoria / BPO</td>
                     <td contenteditable="true">Perfil: Especializada em fatur...</td>
-                    <td contenteditable="true"><span class="badge status-prospect">Mapeado</span></td>
+                    <td contenteditable="true"><select class="status-select status-prospect" onchange="this.className='status-select ' + this.value">
+                            <option value="status-prospect" selected>Mapeado</option>
+<option value="status-draft">Mapeado</option>
+<option value="status-meeting">Em Negociação</option>
+<option value="status-active">Parceiro Ativo</option>
+
+                        </select></td>
                 </tr>
                 <tr>
                     <td contenteditable="true" style="font-weight: 600;">Consulthree</td>
                     <td contenteditable="true" style="color:#aaa;">Consultoria / BPO</td>
                     <td contenteditable="true">Perfil: Hospitais de médio-gra...</td>
-                    <td contenteditable="true"><span class="badge status-prospect">Mapeado</span></td>
+                    <td contenteditable="true"><select class="status-select status-prospect" onchange="this.className='status-select ' + this.value">
+                            <option value="status-prospect" selected>Mapeado</option>
+<option value="status-draft">Mapeado</option>
+<option value="status-meeting">Em Negociação</option>
+<option value="status-active">Parceiro Ativo</option>
+
+                        </select></td>
                 </tr>
                 <tr>
                     <td contenteditable="true" style="font-weight: 600;">Destak Consultoria Médica</td>
                     <td contenteditable="true" style="color:#aaa;">Consultoria / BPO</td>
                     <td contenteditable="true">Perfil: Foco em humanização e ...</td>
-                    <td contenteditable="true"><span class="badge status-prospect">Mapeado</span></td>
+                    <td contenteditable="true"><select class="status-select status-prospect" onchange="this.className='status-select ' + this.value">
+                            <option value="status-prospect" selected>Mapeado</option>
+<option value="status-draft">Mapeado</option>
+<option value="status-meeting">Em Negociação</option>
+<option value="status-active">Parceiro Ativo</option>
+
+                        </select></td>
                 </tr>
                 <tr>
                     <td contenteditable="true" style="font-weight: 600;">MedConsulting ⚠️</td>
                     <td contenteditable="true" style="color:#aaa;">Consultoria / BPO</td>
                     <td contenteditable="true">Perfil: JÁ TEM IA própria (Med...</td>
-                    <td contenteditable="true"><span class="badge status-prospect">Mapeado</span></td>
+                    <td contenteditable="true"><select class="status-select status-prospect" onchange="this.className='status-select ' + this.value">
+                            <option value="status-prospect" selected>Mapeado</option>
+<option value="status-draft">Mapeado</option>
+<option value="status-meeting">Em Negociação</option>
+<option value="status-active">Parceiro Ativo</option>
+
+                        </select></td>
                 </tr>
                 <tr>
                     <td contenteditable="true" style="font-weight: 600;">LK Consultoria & RHF Talentos</td>
                     <td contenteditable="true" style="color:#aaa;">Consultoria / BPO</td>
                     <td contenteditable="true">Perfil: Redes de RH (R&S, clim...</td>
-                    <td contenteditable="true"><span class="badge status-prospect">Mapeado</span></td>
+                    <td contenteditable="true"><select class="status-select status-prospect" onchange="this.className='status-select ' + this.value">
+                            <option value="status-prospect" selected>Mapeado</option>
+<option value="status-draft">Mapeado</option>
+<option value="status-meeting">Em Negociação</option>
+<option value="status-active">Parceiro Ativo</option>
+
+                        </select></td>
                 </tr>
                 <tr>
                     <td contenteditable="true" style="font-weight: 600;">AE BPO & GFX Inteligência Financeira</td>
                     <td contenteditable="true" style="color:#aaa;">Consultoria / BPO</td>
                     <td contenteditable="true">Perfil: Terceirização de proce...</td>
-                    <td contenteditable="true"><span class="badge status-prospect">Mapeado</span></td>
+                    <td contenteditable="true"><select class="status-select status-prospect" onchange="this.className='status-select ' + this.value">
+                            <option value="status-prospect" selected>Mapeado</option>
+<option value="status-draft">Mapeado</option>
+<option value="status-meeting">Em Negociação</option>
+<option value="status-active">Parceiro Ativo</option>
+
+                        </select></td>
                 </tr>
             </tbody>
         </table>
